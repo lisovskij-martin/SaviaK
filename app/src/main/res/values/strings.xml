@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SaviaK</string>
+    <string name="ticketListSaving">  СОХРАНЕННЫЕ БИЛЕТЫ:</string>
+    <string name="startTracking">Запустить отслеживание</string>
+    <string name="title_activity_auth">AuthActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_avia_main">AviaMainActivity</string>
+    <string name="title_activity_d_b_helper">DBHelper</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_ticket_list">TicketListActivity</string>
+    <string name="title_activity_ticket_showed">TicketShowed</string>
+    <string name="title_activity_trip_adapter">TripAdapter</string>
+    <string name="title_activity_trip_list">TripListActivity</string>
+    <string name="title_activity_trip_main">TripMainActivity</string>
+    <string name="title_activity_work_with_date">WorkWithDate</string>
+</resources>

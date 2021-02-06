@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LL_trip_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layout_alignParentTop="true"
+    tools:context=".AviaMainActivityK"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txtv_trip_city"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Откуда"
+        android:layout_marginTop="15dp"
+        android:textAlignment="gravity"
+        android:textColor="@color/textDark"
+        android:fontFamily="sans-serif-condensed"
+        android:background="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/LL_trip_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="4dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/CityInput1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/Cross1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:layout_marginTop="3dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ListCity1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/shadow_for_list"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Куда"
+        android:layout_marginTop="5dp"
+        android:textAlignment="gravity"
+        android:textColor="@color/textDark"
+        android:fontFamily="sans-serif-condensed"
+        android:background="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="4dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/CityInput2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/Cross2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:layout_marginTop="3dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/ListCity2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/shadow_for_list"/>
+
+    <TextView
+        android:id="@+id/GPS_location"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Ближайший аэропорт: "
+        android:layout_marginTop="17dp"
+        android:textAlignment="gravity"
+        android:textColor="@color/textDark"
+        android:fontFamily="sans-serif-condensed"
+        android:background="@android:color/transparent"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFromHere"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:onClick="onClick"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:text="отсюда" />
+
+        <Button
+            android:id="@+id/btnToHere"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:onClick="onClick"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:text="сюда" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginHorizontal="17dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAlignment="gravity"
+                android:textColor="@color/textDark"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                android:text="Дата вылета" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/DateInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20"
+                    android:textColor="@color/textDark"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:hint="Дата"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnDataChooser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/small_blue_button"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@android:drawable/ic_menu_today" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="gravity"
+                android:textColor="@color/textDark"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                android:text="Желаемая цена" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wantval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20"
+                    android:textColor="@color/textDark"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:hint="Цена"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnWantVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/small_blue_button"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginHorizontal="20dp"
+            android:onClick="onClick"
+            android:text="СОХРАНИТЬ" />
+
+        <Button
+            android:id="@+id/goToSpisok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="7dp"
+            android:onClick="onClick"
+            android:text="ПЕРЕЙТИ К СОХРАНЕННЫМ" />
+
+        <Button
+            android:id="@+id/btnFindTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="7dp"
+            android:onClick="onClick"
+            android:text="НАЙТИ БИЛЕТ" />
+
+
+    <LinearLayout
+        android:id="@+id/LLticketOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="5dp"
+        android:paddingBottom="5dp"
+        android:elevation="4dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/image_view_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ticket_blue" />
+        <TextView
+            android:id="@+id/txtTicketOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/textDark"
+            android:layout_gravity="center_vertical"
+            android:maxLines="4" />
+    </LinearLayout>
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_to_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/small_blue_button"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingHorizontal="20dp"
+        android:text="Экскурсии"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_blue_button"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="5dp"
+            android:onClick="onClick"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:src="@drawable/log_out" />
+
+</RelativeLayout>

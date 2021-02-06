@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937707655124",
+    "project_id": "saviak-c18d0",
+    "storage_bucket": "saviak-c18d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937707655124:android:27c3097ef18e23e2281041",
+        "android_client_info": {
+          "package_name": "com.example.saviak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937707655124-396bali8mvn4eqvegmlv1js3r3hjl0t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC_bqWBAZ2pG42GpwukDlVR-rFNDjEcZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937707655124-396bali8mvn4eqvegmlv1js3r3hjl0t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

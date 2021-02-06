@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/blue_A200</item>
+        <item name="android:colorAccent">@color/blue_A200</item>
+    </style>
+
+    <style name="MyAlertDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/blue_A200</item>
+    </style>
+
+    <color name="blue_A200">#448AFF</color>
+</resources>
